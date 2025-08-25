@@ -1,8 +1,13 @@
+@import "tailwindcss";
+
+@plugin '../../hero.ts';
+/* Note: You may need to change the path to fit your project structure */
+@source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
+@custom-variant dark (&:is(.dark *));
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -17,7 +22,7 @@
 
   --animate-wiggle: bouncing 0.3s ease-out;
 
-  
+
   @keyframes bouncing {
     0% { transform: scale(0) translateY(0); }
     70% { transform: scale(1.1) translateY(-10px); }
@@ -25,20 +30,6 @@
     100% { transform: scale(1) translateY(0); }
   }
 }
-
-/* @theme {
-  --animate-wiggle: wiggle 1s ease-in-out infinite;
-
-  @keyframes wiggle {
-    0%,
-    100% {
-      transform: rotate(-3deg);
-    }
-    50% {
-      transform: rotate(3deg);
-    }
-  }
-} */
 
 @media (prefers-color-scheme: dark) {
   :root {

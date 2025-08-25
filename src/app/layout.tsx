@@ -1,3 +1,4 @@
+import {Providers} from "./providers";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
@@ -22,15 +23,17 @@ export default function RootLayout({
       <body
         className={`relative ${roboto.className} antialiased`}
       >
-        <div className={`
-          absolute z-1 size-[100%] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-20
-        `}></div>
-        <div className="relative z-2 max-w-[1920px] min-h-[100vh] overflow-auto 
-          p-2 flex 
-        ">
-          <Navbar />
-          {children}
-        </div>
+        <Providers>
+          <div className={`
+            absolute z-1 size-[100%] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-20
+          `}></div>
+          <div className="relative z-2 max-w-[1920px] min-h-[100vh] overflow-auto 
+            p-2 flex gap-2
+          ">
+            <Navbar />
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );
