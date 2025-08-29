@@ -24,11 +24,11 @@ export default function RootLayout({
         className={`relative ${roboto.className} antialiased`}
       >
         <Providers>
-          <div className={`
-            absolute z-1 size-[100%] bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-20
-          `}></div>
+          <div className={`absolute z-1 size-[100%] bg-gradient-to-r from-indigo-500 
+            via-purple-500 to-pink-500 opacity-20`}
+          ></div>
           <div className="relative z-2 max-w-[1920px] min-h-[100vh] overflow-auto 
-            p-2 flex gap-2
+            p-1 flex gap-2
           ">
             <Navbar />
             {children}

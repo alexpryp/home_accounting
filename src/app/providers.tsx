@@ -1,11 +1,13 @@
 'use client'
 
-import {HeroUIProvider} from '@heroui/react'
+import { HeroUIProvider } from '@heroui/react'
 
 export function Providers({children}: { children: React.ReactNode }) {
   return (
     <HeroUIProvider>
-      {children}
+      <main className="dark text-foreground bg-background">
+        {children}
+      </main>
     </HeroUIProvider>
   )
 }
