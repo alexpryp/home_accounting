@@ -10,6 +10,7 @@ export type TNavbarButtonItem = {
   imageSVG: string;
   altText: string;
   inscription: string;
+  href: string;
 }
 
 export type TNavbarButtonPropItem = {

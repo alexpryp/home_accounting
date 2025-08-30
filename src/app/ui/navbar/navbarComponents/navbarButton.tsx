@@ -1,14 +1,39 @@
+'use client'
+
 import { Button } from '@heroui/button';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 import { TNavbarButtonPropItem } from '../types/types';
 
 export default function NavbarButton({
   navbarButtonProp 
 }: TNavbarButtonPropItem) {
+  const pathname = usePathname();
+
   return (
-    <Button size="sm" radius="sm" className='flex items-center bg-transparent hover:bg-default'>
+    <Button 
+      as={Link} 
+      href={navbarButtonProp.href} 
+      size="sm" 
+      radius="sm" 
+      className={clsx(
+        'flex items-center relative bg-transparent hover:bg-default',
+        {
+          'bg-default': pathname === navbarButtonProp.href,
+        },
+      )}
+    >
       <div className="flex items-center gap-4 w-[100%] ">
+        {
+          pathname === navbarButtonProp.href 
+          ? (<div className='absolute left-0 rounded-[0.125rem] w-[0.125rem] 
+              h-[1.25rem] border border-[#17C964] animate-softapper'
+            />)
+          : null
+        }
         <Image 
           src={navbarButtonProp.imageSVG} 
           alt={navbarButtonProp.altText} 

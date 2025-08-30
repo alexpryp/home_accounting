@@ -10,26 +10,31 @@ export const navbarButtons: TNavbarButtonItem[] = [
   {
     imageSVG: HomeSVG,
     altText: "Main page icon",
-    inscription: "Main"
+    inscription: "Main",
+    href: "/"
   },
   {
     imageSVG: WalletSVG,
     altText: "Accounts page icon",
-    inscription: "Accounts"
+    inscription: "Accounts",
+    href: "/accounts"
   },
   {
     imageSVG: CardTransfer,
-    altText: "Budged page icon",
-    inscription: "Budged"
+    altText: "Budget page icon",
+    inscription: "Budget",
+    href: "/budget"
   },
   {
     imageSVG: CalendarDate,
     altText: "Calendar page icon",
-    inscription: "Calendar"
+    inscription: "Calendar",
+    href: "/calendar"
   },
   {
     imageSVG: Banknote2,
     altText: "Currencies page icon",
-    inscription: "Currencies"
+    inscription: "Currencies",
+    href: "/currencies"
   },
 ]
