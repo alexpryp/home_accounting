@@ -15,8 +15,11 @@ export type TNavbarButtonItem = {
 
 export type TNavbarButtonPropItem = {
   navbarButtonProp: TNavbarButtonItem;
+  navbarOpen?: boolean;
 }
 
 export type TNavbarButtonProps = {
-  navbarButtons: TNavbarButtonItem[]
+  navbarButtons: TNavbarButtonItem[],
+  settingButton: TNavbarButtonItem
 }
+

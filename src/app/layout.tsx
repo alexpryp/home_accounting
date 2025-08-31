@@ -4,7 +4,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/ui/navbar/navbar";
 
-import { navbarButtons } from "./ui/navbar/constants/constants";
+import { navbarButtons, settingButton } from "./ui/navbar/constants/constants";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -49,7 +49,7 @@ export default function RootLayout({
           <div className="relative z-2 max-w-[1920px] min-h-[100vh] overflow-auto 
             p-1 flex gap-2
           ">
-            <Navbar navbarButtons={navbarButtons}/>
+            <Navbar navbarButtons={navbarButtons} settingButton={settingButton}/>
             {children}
           </div>
         </Providers>
