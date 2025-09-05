@@ -7,51 +7,59 @@ import MedalStarSquare from '../../../../../public/icons/MedalStarSquare.svg';
 import ChartSquare from '../../../../../public/icons/ChartSquare.svg';
 import Settings from '../../../../../public/icons/Settings.svg';
 
+import { HomeIcon } from '../../icons/icons';
+
 import { TNavbarButtonItem } from "../types/types";
 
 export const navbarButtons: TNavbarButtonItem[] = [
   {
-    imageSVG: HomeSVG,
+    imageSVG: HomeIcon,
     altText: "Main page icon",
     inscription: "Main",
     href: "/"
   },
-  {
-    imageSVG: WalletSVG,
-    altText: "Accounts page icon",
-    inscription: "Accounts",
-    href: "/accounts"
-  },
-  {
-    imageSVG: CardTransfer,
-    altText: "Budget page icon",
-    inscription: "Budget",
-    href: "/budget"
-  },
-  {
-    imageSVG: CalendarDate,
-    altText: "Calendar page icon",
-    inscription: "Calendar",
-    href: "/calendar"
-  },
-  {
-    imageSVG: Banknote2,
-    altText: "Currencies page icon",
-    inscription: "Currencies",
-    href: "/currencies"
-  },
-  {
-    imageSVG: MedalStarSquare,
-    altText: "Goals page icon",
-    inscription: "Goals",
-    href: "/goals"
-  },
-  {
-    imageSVG: ChartSquare,
-    altText: "Reports page icon",
-    inscription: "Reports",
-    href: "/reports"
-  },
+  // {
+  //   imageSVG: HomeSVG,
+  //   altText: "Main page icon",
+  //   inscription: "Main",
+  //   href: "/"
+  // },
+  // {
+  //   imageSVG: WalletSVG,
+  //   altText: "Accounts page icon",
+  //   inscription: "Accounts",
+  //   href: "/accounts"
+  // },
+  // {
+  //   imageSVG: CardTransfer,
+  //   altText: "Budget page icon",
+  //   inscription: "Budget",
+  //   href: "/budget"
+  // },
+  // {
+  //   imageSVG: CalendarDate,
+  //   altText: "Calendar page icon",
+  //   inscription: "Calendar",
+  //   href: "/calendar"
+  // },
+  // {
+  //   imageSVG: Banknote2,
+  //   altText: "Currencies page icon",
+  //   inscription: "Currencies",
+  //   href: "/currencies"
+  // },
+  // {
+  //   imageSVG: MedalStarSquare,
+  //   altText: "Goals page icon",
+  //   inscription: "Goals",
+  //   href: "/goals"
+  // },
+  // {
+  //   imageSVG: ChartSquare,
+  //   altText: "Reports page icon",
+  //   inscription: "Reports",
+  //   href: "/reports"
+  // },
 ]
 
 export const settingButton: TNavbarButtonItem = {

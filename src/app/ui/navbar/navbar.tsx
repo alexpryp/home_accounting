@@ -2,12 +2,12 @@
 
 import { useState } from 'react';
 import { Button } from '@heroui/button';
-import {Divider} from "@heroui/react";
+import { Divider } from "@heroui/react";
 import Image from 'next/image';
 import clsx from 'clsx';
 
-import BurgerMenuSVG from '../../../../public/icons/burgerMenu.svg';
 import SalusLogo from '../../../../public/icons/SalusLogo.svg';
+import { HamburgerMenuIcon } from '../icons/icons';
 
 import NavbarButton from "./navbarComponents/navbarButton";
 
@@ -34,7 +34,7 @@ export default function Navbar({
           className="w-14 gap-0 px-3 min-w-11 max-w-11"
           onPress={navbarOpenHandler}
         >
-          <Image src={BurgerMenuSVG} alt="Burger menu" width={20} height={20} unoptimized />
+          <HamburgerMenuIcon width={"20"} height={"20"} fill={"white"}/>
         </Button>
         { navbarOpen
             ? (<div className="flex gap-2 items-center justify-between pr-2">
@@ -46,13 +46,22 @@ export default function Navbar({
       </div>
       <Divider className="my-4" />
       <div className="flex flex-col gap-2">
-        {navbarButtons.map((item) => {
+        {/* {navbarButtons.map((item) => {
           return (
             <NavbarButton 
               key={item.inscription} 
               navbarButtonProp={item}
               navbarOpen={navbarOpen}
             />
+          )
+        })} */}
+        {navbarButtons.map((item) => {
+          return (
+            <Button 
+              key={item.inscription} 
+            >
+              <item.imageSVG/>
+            </Button>
           )
         })}
       </div>
