@@ -1,8 +1,9 @@
 import {Button} from '@heroui/button';
-import Image from 'next/image';
-import Sun2 from '../../../../public//icons/Sun2.svg';
-import User from '../../../../public/icons/User.svg';
 import { TStatusBarProps } from './types/types';
+
+import SmallIconButton from "../buttons/SmallIconButton";
+
+import { Sun2Icon, UserCircleIcon } from "../icons/icons";
 
 export default function StatusBar({
   header
@@ -13,21 +14,23 @@ export default function StatusBar({
     >
       <h1 className="text-lg leading-none ml-2">{header}</h1>
       <div className="flex gap-4">
+        <SmallIconButton
+          buttonWidth={"11"}
+          iconWidth={"20"}
+          iconHeight={"20"}
+          imageSVG={Sun2Icon}
+        />
         <Button size="sm" radius="sm" 
-          className="w-14 gap-0 px-3 min-w-11 max-w-11"
-        >
-          <Image src={Sun2} alt="Sun icon" width={20} height={20} />
-        </Button>
-        <Button size="sm" radius="sm" 
-          className="w-14 gap-0 px-3 min-w-11 max-w-11"
+          className="w-11 gap-0 px-3 min-w-11 max-w-11"
         >
           <div className="text-sm/3.5">RU</div>
         </Button>
-        <Button size="sm" radius="sm" 
-          className="w-14 gap-0 px-3 min-w-11 max-w-11"
-        >
-          <Image src={User} alt="User icon" width={20} height={20} />
-        </Button>
+        <SmallIconButton
+          buttonWidth={"11"}
+          iconWidth={"20"}
+          iconHeight={"20"}
+          imageSVG={UserCircleIcon}
+        />
       </div>
     </div>
   );

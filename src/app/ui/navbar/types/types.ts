@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React from 'react';
 
 // Universal type for SVG
 export type SVGIcon = 
@@ -7,7 +7,6 @@ export type SVGIcon =
   | React.ReactElement;
 
 export type TNavbarButtonItem = {
-  //imageSVG: string;
   imageSVG: React.ElementType;
   altText: string;
   inscription: string;

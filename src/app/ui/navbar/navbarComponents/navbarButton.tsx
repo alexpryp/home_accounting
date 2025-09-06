@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@heroui/button';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
@@ -36,13 +35,6 @@ export default function NavbarButton({
               />)
             : null
         }
-        {/* <Image 
-          src={navbarButtonProp.imageSVG} 
-          alt={navbarButtonProp.altText} 
-          width={20} 
-          height={20}
-          unoptimized
-        /> */}
         <Icon width={"20"} height={"20"}/>
         {navbarOpen
           ? (<div className="text-base">{navbarButtonProp.inscription}</div>)
