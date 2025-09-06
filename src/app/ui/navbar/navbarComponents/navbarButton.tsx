@@ -14,6 +14,8 @@ export default function NavbarButton({
 }: TNavbarButtonPropItem) {
   const pathname = usePathname();
 
+  const Icon = navbarButtonProp.imageSVG;
+
   return (
     <Button 
       as={Link} 
@@ -34,13 +36,14 @@ export default function NavbarButton({
               />)
             : null
         }
-        <Image 
+        {/* <Image 
           src={navbarButtonProp.imageSVG} 
           alt={navbarButtonProp.altText} 
           width={20} 
           height={20}
           unoptimized
-        />
+        /> */}
+        <Icon width={"20"} height={"20"}/>
         {navbarOpen
           ? (<div className="text-base">{navbarButtonProp.inscription}</div>)
           : null

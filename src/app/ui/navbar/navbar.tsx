@@ -57,11 +57,11 @@ export default function Navbar({
         })} */}
         {navbarButtons.map((item) => {
           return (
-            <Button 
-              key={item.inscription} 
-            >
-              <item.imageSVG/>
-            </Button>
+            <NavbarButton 
+              key={item.inscription}
+              navbarButtonProp={item}
+              navbarOpen={navbarOpen}
+            />
           )
         })}
       </div>
