@@ -1,15 +1,15 @@
 'use client'
 
 import { useState } from 'react';
-import { Button } from '@heroui/button';
-import { Divider } from "@heroui/react";
 import Image from 'next/image';
 import clsx from 'clsx';
 
-import SalusLogo from '../../../../public/icons/SalusLogo.svg';
+import { Button } from '@heroui/button';
+import { Divider } from "@heroui/react";
+import NavbarButton from "./navbarComponents/navbarButton";
 import { HamburgerMenuIcon } from '../icons/icons';
 
-import NavbarButton from "./navbarComponents/navbarButton";
+import SalusLogo from '../../../../public/icons/SalusLogo.svg';
 
 import { TNavbarButtonProps } from "./types/types";
 
@@ -38,7 +38,7 @@ export default function Navbar({
         </Button>
         { navbarOpen
             ? (<div className="flex gap-2 items-center justify-between pr-2">
-                <div>Salus</div>
+                <div className="dark:text-gray-50 light:text-gray-950">Salus</div>
                 <Image src={SalusLogo} alt="Salus logo" width={20} height={20} unoptimized />
               </div>)
             : null

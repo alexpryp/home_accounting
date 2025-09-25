@@ -2,6 +2,7 @@ import {Button} from '@heroui/button';
 import { TStatusBarProps } from './types/types';
 
 import SmallIconButton from "../buttons/SmallIconButton";
+import { ThemeSwitcher } from "./components/ThemeSwitcher";
 
 import { Sun2Icon, UserCircleIcon } from "../icons/icons";
 
@@ -12,8 +13,9 @@ export default function StatusBar({
     <div className="flex gap-4 items-center justify-between w-[100%] h-[3rem] bg-[rgba(30,30,30,0.9)] p-2 rounded-2xl 
       animate-softapper"
     >
-      <h1 className="text-lg leading-none ml-2">{header}</h1>
+      <h1 className="text-lg leading-none ml-2 text-white">{header}</h1>
       <div className="flex gap-4">
+        <ThemeSwitcher/>
         <SmallIconButton
           buttonWidth={"11"}
           iconWidth={"20"}

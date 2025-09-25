@@ -1,13 +1,24 @@
 'use client'
 
-import { HeroUIProvider } from '@heroui/react'
+import { HeroUIProvider } from '@heroui/react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 export function Providers({children}: { children: React.ReactNode }) {
   return (
-    <HeroUIProvider>
-      <main className="dark text-foreground bg-background">
-        {children}
-      </main>
-    </HeroUIProvider>
+    <NextThemesProvider 
+      attribute="class" 
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange={false}
+      storageKey="theme"
+      themes={['light', 'dark', 'purple']}
+    >
+      <HeroUIProvider>
+        {/* <main className="dark text-foreground bg-background"> */}
+        <main>
+          {children}
+        </main>
+      </HeroUIProvider>
+    </NextThemesProvider>
   )
 }
